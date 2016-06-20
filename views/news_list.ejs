@@ -1,0 +1,70 @@
+<%-include common%>
+<div class="main-con">
+	
+		<a href="/dologin/add" class="addA">添加内容</a>
+
+		<table class="table table-bordered ">
+			<tr>
+				<th>标题</th>
+				<th>内容</th>
+				<th>创建时间</th>
+				<th>图片</th>
+				<th>操作</th>
+			</tr>
+			<%
+				for(var i=0;i<n.length;i++){
+			%>
+			<tr>
+				<td><%=n[i].title%></td>
+				<td><%=n[i].content%></td>
+				<td><%=n[i].date%></td>
+				<td><img src="<%=n[i].imgs%>"></td>
+				<td>
+					<a href="/dologin/modify" id="mod">编辑</a>
+					
+					<a href="/dologin/delNews?newsId=<%=n[i]._id%>">自己_id删除</a>
+
+				</td>
+			</tr>
+
+			<%}%>
+		</table>
+
+
+		<nav style="margin-left: 30%">
+			  <ul class="pagination">
+			    <li>
+				      <a href="/dologin/page?pageNo=<%=pre%>" aria-label="Previous">
+				        <span aria-hidden="true">&laquo;</span>
+				      </a>
+			    </li>
+			    
+			        <%
+						for(var i=1;i<=pages;i++){
+    				%>
+
+    	 			<li class="lii"><a href="/dologin/page?pageNo=<%=i%>"><%=i%></a></li>
+
+
+    				<%}%>
+
+			    <li>
+				      <a href="/dologin/page?pageNo=<%=next%>" aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+			    </li>
+			  </ul>
+		</nav>
+
+		<script type="text/javascript">
+			$('nav>.pagination>.lii>a').each(function(){
+				$(this).click(function(){
+					$(this).css({background:'red'})
+				})
+			})
+		</script>
+
+</div>
+
+</body>
+</html>

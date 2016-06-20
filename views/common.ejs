@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+    <style type="text/css">
+        @font-face {font-family: 'iconfont';
+            src: url('/font/iconfont.eot'); /* IE9*/
+            src: url('/font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('/font/iconfont.woff') format('woff'), /* chrome、firefox */
+            url('/font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+            url('/font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+        }
+        .iconfont{
+            font-family:"iconfont" !important;
+            font-size:16px;font-style:normal;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: 0.2px;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .fix{
+		zoom:1;
+	}
+	.fix:after{
+		display: block;
+		content: "";
+		clear: both;
+		height: 0;
+		line-height: 0;
+		visibility: hidden;
+	}
+	li{
+		list-style: none;
+	}
+	a{
+		text-decoration: none;
+	}
+	#header {
+	    z-index: 200;
+	    background: #fff;
+	    min-height: 80px;
+	    margin-right: 0;
+	}
+	#header .brand {
+	    float: left;
+	    /*width: 240px;*/
+	    width: 19.5%;
+	    min-height: 80px;
+	    padding: 0 0 0 10px;
+	    position: relative;
+	    background: #1abc9c url(/images/logo.png) no-repeat 25px 26px;
+	}
+	#header .logo {
+	    color: #fff;
+	    font-size: 1.7em;
+	    text-transform: uppercase;
+	    padding: 23px 0 0 57px;
+	    display: inline-block;
+	}
+	.toggle-navigation.toggle-left {
+	    margin: 23px 0 0 20px;
+	    display: inline-block;
+	}
+	#header .btn1{
+	    padding: 3px 9px;
+	    background: #F6F6F6;
+	    border-radius: 50%;
+	    width: 35px;
+	    height: 35px;
+	    outline: none;
+	}
+	#header .user-nav {
+	    float: right;
+	    padding-top: 23px;
+	    padding-right: 70px;
+	}
+	#header .btn2{
+		background-color: white;
+	}
+/*侧边导航条*/
+	.sidebar{
+		position: relative;
+		background-color: #F1F2F7;
+	}
+	.sidebar .leftside-navigation{
+		background-color: #293949;
+		/*width: 240px;*/
+		width: 19%;
+		position: absolute;
+		top: 0;
+		left: 15px;
+		float: left;
+	}
+	.sidebar .leftside-navigation ul li{
+		list-style-type: none;
+    	border-bottom: 1px solid rgba(255,255,255,.05);
+	}
+	.sidebar .leftside-navigation ul li a{
+		text-decoration: none;
+	    display: block;
+	    padding: 18px 0 18px 25px;
+	    font-size: 12px;
+	    outline: 0;
+	    color: #AEB2B7;
+	    width: 100%;
+	}
+	.sidebar .leftside-navigation span{
+		font-size: 10px;
+		margin-left: 200%;
+	}
+
+/*接下来的主要内容*/
+	.main-con{
+		background-color: #F1F2F7;
+		float: left;
+		position: absolute;
+		left: 20.2%;
+		text-indent: 10px;
+		width: 79%;
+	}
+
+
+	.main-con .row .conZong{
+    	color: #fff;
+    	margin-bottom: 28px;
+	}
+	.main-con .row .cor1{
+		background-color: #1abc9c;
+	}
+	.main-con .row .cor2{
+		background-color: #E84C3D;
+	}
+	.main-con .row .cor3{
+		background-color: #3598DB;
+	}
+	.main-con .row .cor4{
+		background-color: #1ABC9C;
+	}
+	.main-con .row .cor5{
+		background-color: #3598DB;
+	}
+	.main-con .row .cor6{
+		background-color: #9A59B5;
+	}
+	
+	.main-con .row .conZong .conZong-con{
+		background: 0 0;
+    	padding: 10px 10px 13px;
+    	display: inline-block;
+    	position: relative;
+    	z-index: 5;
+	}
+/*添加新闻界面*/
+	.main-con form{
+		padding-top: 15px;
+		font-family: '微软雅黑';
+	}
+	.main-con form input[type="file"]{
+		margin-left: 20px;
+	}
+	.main-con form .sub-mit{
+		background-color: #1ABC9C;
+		color: white;
+		margin-left: 5px;
+		width: 100px;
+	}
+	/*列表界面添加按钮*/
+	.addA{
+		display: block;
+		width: 100px;
+		height: 50px;
+		background-color: #1ABC9C;
+		margin: 20px;
+		color: white;
+		line-height: 50px;
+		padding-left: 10px;
+		text-decoration: none;
+	}
+	
+
+    </style>
+
+    </head>
+  <body>
+
+	<section class="container-fluid fix">
+		<header id="header">
+			<div class="brand">
+				<a href="#" class="logo">
+					管理后台
+				</a>
+			</div>
+			<div class="toggle-navigation toggle-left">
+				<button class="btn btn1">
+					<span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+				</button>
+			</div>
+			<div class="user-nav">
+				<img src="/images/0fd1bf7959d95c6af57a46399c330876.png">
+
+				<div class="btn-group">
+					<button type="button" class="btn  dropdown-toggle btn2" data-toggle="dropdown" >
+					    姓名<span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" role="menu">
+					    <li><a href="#">个人资料</a></li>
+					    <li><a href="#">登出</a></li>
+					  </ul>
+				</div>
+			</div>
+		</header>
+	</section>
+	
+	<aside class="container-fluid sidebar fix">
+		<div class="leftside-navigation">
+			<ul>
+				<li>
+					<a href="/dologin">首页</a>
+				</li>
+				<li class="btn-group">
+					<a href="#" class="btn dropdown-toggle" data-toggle="dropdown">内容<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+					<ul class="dropdown-menu">
+					    <li><a href="/dologin/newslist">列表内容</a></li>
+					    <li><a href="/dologin/add">添加内容</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">评论列表</a>
+				</li>
+				<li class="btn-group">
+					<a href="#" class="btn dropdown-toggle" data-toggle="dropdown">文件<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+					<ul class="dropdown-menu">
+					    <li><a href="/dologin/filelist">文件列表</a></li>
+					    <li><a href="/dologin/addfile">添加文件</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</aside>
+	
+	<script type="text/javascript">
+		$(function(){
+			var winheight=$(window).height();
+			$('.sidebar .leftside-navigation').css({height:winheight});
+			$('.main-con').css({height:winheight})
+
+		});
+		var d=1;
+		$('.btn1').click(function(){
+			if(d%2==0){
+				$('.leftside-navigation').animate({left:'15px'},'fast');
+				$('.main-con').css({left:"20.2%",width:'79%'})
+			}else{
+				$('.leftside-navigation').animate({left:'-260px'},'fast');
+				$('.main-con').css({left:"1%",width:'100%'})
+			}
+			d++;	
+		})
+
+
+
+	</script>

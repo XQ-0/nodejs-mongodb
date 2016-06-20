@@ -1,0 +1,24 @@
+<%-include common%>
+<div class="main-con">
+	<form action="/dologin/addd" method="post" enctype="multipart/form-data">
+		<div class="form-group">
+		    <label>标题</label>
+		    <input type="text" class="form-control" name="title">
+		</div>
+		<div class="form-group">
+		    <label>图集</label>
+		     <input type="file" class="tian"  name="imgfile" multiple>
+		</div>
+		<div class="form-group">
+		    <label>内容</label>
+		    <textarea class="form-control" style="height: 250px;" name="content"></textarea>
+		</div>
+		<div class="form-group">
+		    <label>标签</label>
+		</div>
+		 <button type="submit" class="btn sub-mit">提交</button>
+	</form>
+
+</div>
+</body>
+</html>

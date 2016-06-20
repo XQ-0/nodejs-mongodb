@@ -1,0 +1,58 @@
+<%-include common%>
+<div class="main-con">
+	
+		<a href="/dologin/addfile" class="addA">添加内容</a>
+
+		<table class="table table-bordered ">
+			<tr>
+				<th>名称</th>
+				<th>类型</th>
+				<th>创建时间</th>
+				<th>操作</th>
+			</tr>
+			<%
+				for(var i=0;i<m.length;i++){
+			%>
+			<tr>
+				<td><img src="<%=m[i].imgs%>"></td>
+				<td></td>
+				<td><%=m[i].date%></td>
+				<td>
+					<a href="/dologin/delNews1?newsId=<%=m[i]._id%>">自己_id删除</a>	
+				</td>
+			</tr>
+
+			<%}%>
+		</table>
+
+		<nav style="margin-left: 30%">
+			  <ul class="pagination">
+			    <li>
+				      <a href="#" aria-label="Previous">
+				        <span aria-hidden="true">&laquo;</span>
+				      </a>
+			    </li>
+			    
+			        <%
+						for(var i=1;i<=pages;i++){
+    				%>
+
+    	 			<li><a href="/dologin/pagef?pageNo=<%=i%>"><%=i%></a></li>
+
+
+    				<%}%>
+
+			    <li>
+				      <a href="#" aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+			    </li>
+			  </ul>
+		</nav>
+
+
+	
+</div>
+
+</body>
+</html>

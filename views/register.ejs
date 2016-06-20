@@ -1,0 +1,89 @@
+<%- include header%>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-color:#283848
+		}
+		.top{
+			width: 100%;
+			background-color: #1ABD9D;
+			height: 50px;
+			line-height: 50px;
+			margin-top: 90px;
+			color: white;
+			font-size: 20px;
+			text-indent: 12px;
+		}
+		form{
+			background-color: white;
+			padding-bottom: 5px;
+			padding-top: 10px;
+		}
+		.log a{
+			color: #1ABD9D;
+			font-weight: bold;
+			margin-left: 10px;
+		}
+		form .form-group .form-control{
+			width: 98%;
+			margin-left: 1%;
+			height: 45px;
+			background-color: #FAFAFA;
+		}
+		label{
+			font-size: 16px;
+			margin-top: 3px;
+			display: block;
+		}
+		p{
+			text-indent: 20px;
+		}
+		.btn{
+			background-color: #1ABD9D;
+			color: white;
+		}
+		.reg{
+			width: 98%;
+			margin-left: -8px;
+			height: 50px;
+			line-height: 50px;
+			font-weight: bold;
+			font-size: 18px;
+		}
+		
+	</style>
+		
+			<div class="top">
+				注册
+			</div>
+
+			<form action="/registerYes" method="post">
+				<p class="log">
+					已结是用户？<a href="/">登录</a>
+				</p>
+				<p class="form-group form-inline">
+					<label>用户名：</label>
+					<input class="form-control" type="text" name="uname" >
+				</p>
+				<p class="form-group form-inline">
+					<label>密码：</label>
+					<input class="form-control" type="password" name="upwd" >
+				</p>
+				<p class="form-group form-inline">
+					<label>姓名：</label>
+					<input class="form-control" type="text" name="uxm" >
+				</p>
+				<p class="form-group form-inline">
+					<label>Email：</label>
+					<input class="form-control" type="text" name="uemail" >
+				</p>
+				<p>
+					<button type="submit" class="reg btn">注册</button>
+				</p>
+			</form>
+	
+</body>
+</html>
